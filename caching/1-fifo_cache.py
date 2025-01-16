@@ -31,7 +31,8 @@ class FIFOCache(BaseCaching):
         if key and item:
             if key in self.cache_data:
                 self.cache_data[key] = item
-            else: self._push(key, item)
+            else: 
+                self._push(key, item)
     
     def get(self, key):
         """ Return the value linked """

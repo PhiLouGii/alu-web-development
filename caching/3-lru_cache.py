@@ -29,7 +29,7 @@ class LRUCache(BaseCaching):
         if len(self.cache_data) > BaseCaching.MAX_ITEMS:
             print("DISCARD: {}".format(self.next[self.head]))
             self.remove(self.next[self.head])
-   
+
     def put(self, key, item):
         """ Assign to the directory """
         if key and item:

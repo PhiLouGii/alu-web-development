@@ -33,7 +33,7 @@ class FIFOCache(BaseCaching):
                 self.cache_data[key] = item
             else:
                 self._push(key, item)
-    
+
     def get(self, key):
         """ Return the value linked """
         if key is None or self.cache_data.get(key) is None:

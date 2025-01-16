@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """ LIFO Caching """
+
+
 from base_caching import BaseCaching
 
 
@@ -19,10 +21,10 @@ class LIFOCache(BaseCaching):
                 self.cache_data.pop(self.last_key)
             self.last_key = key
 
-        def get(self, key):
-            """ Return the value linked """
-            if key is None or self.cache_data.get(key) is None:
-                return None
-            if key in self.cache_data:
-                value = self.cache_data[key]
-                return value
+    def get(self, key):
+        """ Return the value linked """
+        if key is None or self.cache_data.get(key) is None:
+            return None
+        if key in self.cache_data:
+            value = self.cache_data[key]
+            return value
